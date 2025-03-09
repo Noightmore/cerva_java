@@ -11,5 +11,8 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-ppj_cv4/target/*
-ppj_cv4/.idea/*
+ppj_cv4/target/*.*
+ppj_cv4_2/target/*.*
+ppj_cv4/.idea/*.*
+ppj_cv4_2/.idea/*.*
+

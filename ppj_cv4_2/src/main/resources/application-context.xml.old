@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Messages -->
+    <bean id="pingMessage" class="app.assignments.message.PingMessage">
+        <!--<constructor-arg value="ping" /> &lt;!&ndash; Sender &ndash;&gt;
+        <constructor-arg value="pong" /> &lt;!&ndash; Recipient &ndash;&gt;
+        <constructor-arg value="Ping has empty body" /> &lt;!&ndash; Message text &ndash;&gt;-->
+    </bean>
+
+    <bean id="helloMessage" class="app.assignments.message.CustomMessage">
+        <constructor-arg value="Alice" /> <!-- Sender -->
+        <constructor-arg value="Bob" /> <!-- Recipient -->
+        <constructor-arg value="Hello, Bob!" /> <!-- Message text -->
+    </bean>
+
+    <bean id="pingMessageReply" class="app.assignments.message.ReplyMessage">
+        <constructor-arg ref="pingMessage" /> <!-- Original message -->
+        <constructor-arg value="Pong" /> <!-- Reply text -->
+    </bean>
+
+    <!-- Define Writers -->
+    <bean id="stdoutWriter" class="app.assignments.writer.StdoutWriter" />
+
+    <bean id="listWriter" class="app.assignments.writer.ListWriter" />
+
+</beans>
