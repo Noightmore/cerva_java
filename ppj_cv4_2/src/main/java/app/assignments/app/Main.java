@@ -70,7 +70,7 @@ public class Main {
 
     @PostConstruct
     public void init() {
-        System.out.println("✅ PostConstruct executed in " + this.getClass().getSimpleName());
+        System.out.println("PostConstruct executed in " + this.getClass().getSimpleName());
     }
 
 
