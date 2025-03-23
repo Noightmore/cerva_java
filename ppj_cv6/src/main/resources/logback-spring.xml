@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- a) Appender pro konzoli s požadovaným enkodérem -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- c) Appender pro zápis do souboru log.txt -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>log.txt</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- b) Kořenový logger nastavený na úroveň DEBUG (po ověření můžete změnit na INFO) -->
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- Logger pro Spring namespace nastavuje úroveň logování na WARN -->
+    <logger name="org.springframework" level="WARN" />
+
+    <!-- 2. Profilově závislá konfigurace pro namespace ppj -->
+    <springProfile name="devel">
+        <logger name="ppj" level="DEBUG" />
+    </springProfile>
+    <springProfile name="!devel">
+        <logger name="ppj" level="INFO" />
+    </springProfile>
+
+</configuration>
