@@ -49,3 +49,16 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
 09:44:22.197 [main] DEBUG o.h.v.i.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
 09:44:22.297 [main] INFO  ppj.assignments.Main - Started Main in 0.733 seconds (JVM running for 1.43)
 09:44:22.298 [main] DEBUG ppj.assignments.Main - Application PPJ_cv6 [profiles devel, description 'Development environment: using DevelWriter']
+09:46:48.244 [main] INFO  ppj.assignments.Main - Starting Main with PID 15845 (/home/rob/Programming/Java_s_cervou/ppj_cv6/target/classes started by rob in /home/rob/Programming/Java_s_cervou/ppj_cv6)
+09:46:48.245 [main] INFO  ppj.assignments.Main - The following profiles are active: prod
+09:46:48.572 [main] DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+09:46:48.574 [main] DEBUG o.h.v.i.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+09:46:48.574 [main] DEBUG o.h.v.i.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+09:46:48.575 [main] DEBUG o.h.v.i.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy29
+09:46:48.576 [main] DEBUG o.h.v.i.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+09:46:48.576 [main] DEBUG o.h.v.i.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+09:46:48.577 [main] DEBUG o.h.v.i.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+09:46:48.577 [main] DEBUG o.h.v.i.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+09:46:48.577 [main] DEBUG o.h.v.i.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+09:46:48.686 [main] INFO  ppj.assignments.Main - Started Main in 0.759 seconds (JVM running for 1.508)
+09:46:48.686 [main] INFO  ppj.assignments.Main - Application PPJ_cv6 [profiles prod, description 'Production environment: using ProdWriter']
